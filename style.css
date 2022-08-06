@@ -15,6 +15,10 @@ body {
   overflow-x: hidden !important;
   position: relative;
 }
+body.keyboard {
+  height: calc(100% + 500px);
+  padding: 50px;
+}
 :root {
   --primary-color: black;
   --secondary-color: #005f2f;
@@ -193,7 +197,7 @@ img {
   right: 0%;
   top: 50px;
   z-index: 1;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 .form-active {
   visibility: visible;
@@ -203,7 +207,7 @@ img {
   right: 50px;
   top: 50px;
   z-index: 5;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 /* --------------------------hero-section ---------------------------------------- */
@@ -601,9 +605,13 @@ p {
     top: 10%;
     z-index: 1;
   }
+  .form-div {
+    top: -40px;
+  }
   .form-active {
     position: fixed;
     width: 80%;
+    top: 20px;
     right: 52px;
   }
   .contact-form {

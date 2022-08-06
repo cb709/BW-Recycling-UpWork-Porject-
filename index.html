@@ -40,6 +40,18 @@
 
     <!-- Custom Css  -->
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+ 
+      @media screen and (max-width: 768px){
+      .form-onfocus {
+      position: fixed;
+      width: 80%;
+      top: -160px;
+      right: 52px;
+      }
+      }
+    </style>
   </head>
 
   <body>
@@ -439,7 +451,7 @@
     <div class="from-nd-btn">
       <!---------form ------->
       <div class="form-div-container">
-        <div class="form-div" id="form">
+        <div class="form-div " id="form">
           <div class="contact-form">
             <i class="fa-solid fa-rectangle-xmark" id="closing-btn"></i>
             <h4>Contact Us</h4>
@@ -493,14 +505,15 @@
                     />
                   </div>
                 </div>
-                <div class="col pt-3">
+                <div class="col pt-3 ">
                   <textarea
                     class="form-control p-2"
                     name=""
                     id=""
                     cols="55"
-                    rows="3"
+                    rows="2"
                     placeholder="What do you have to sell?"
+                    onfocus="Scrolltop(this)";
                   ></textarea>
                 </div>
                 <input
@@ -985,5 +998,13 @@
         },
       });
     </script>
+
+    <script>
+      function Scrolltop(x) {
+        var element = document.getElementById("form");
+        console.log(element)
+        element.classList.add("form-onfocus");
+      }
+      </script>
   </body>
 </html>
